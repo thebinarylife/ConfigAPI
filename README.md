@@ -5,4 +5,4 @@
 3. Use the cooresponding get methods to get primitive types.
 
 
-If you need to load an existing configuration use ConfigurationLoader.loadConfiguration(path, filename)
+If you need to load an existing configuration use ConfigurationLoader.loadConfig(path, filename)
