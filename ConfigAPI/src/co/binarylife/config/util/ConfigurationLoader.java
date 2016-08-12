@@ -63,29 +63,6 @@ public class ConfigurationLoader {
 		}
 		
 		return null;
-//		try{
-//			BufferedReader br = new BufferedReader(new FileReader(f));
-//			
-//			HashMap<String, Object> kvPairs = new HashMap<>();
-//			String line = null;
-//			
-//			while((line = br.readLine()) != null){
-//				if(line.startsWith("# "));
-//				else if(line.contains(":")){
-//					String[] kv = line.split(": ");
-//					
-//					kvPairs.put(kv[0], kv[1]);
-//				}
-//			}
-//			
-//			br.close();
-//			
-//			return kvPairs;
-//				
-//		}catch(Exception e){
-//			e.printStackTrace();
-//			return null;
-//		}
 		
 	}
 	

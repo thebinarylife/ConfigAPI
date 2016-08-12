@@ -216,10 +216,7 @@ public class Config {
 				pStream.close();
 				return;
 			}
-			
-//			if(value.toString().contains(".")){
-//				createSection(value.toString(), pStream);
-//			}else
+
 			pStream.write(key + ": " + value);
 			
 			pStream.newLine();
@@ -236,27 +233,5 @@ public class Config {
 			e.printStackTrace();
 		}
 	}
-	
-//	
-//	public void test(){
-//		set("test", 1);
-//	}
-	
-//	public void createSection(String value, BufferedWriter pStream){
-//		String[] splitValue = value.split(".");
-//		
-//		String space = "";
-//		for(String s : splitValue){
-//			space += "  ";
-//			
-//			try {
-//				pStream.write(space + s);
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
-//			
-//			if()
-//		}
-//	}
 	
 }
