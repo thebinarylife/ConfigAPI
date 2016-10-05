@@ -32,7 +32,6 @@ public class Config {
 	 * @param filename Name of the file
 	 * @throws IOException
 	 */
-	
 	public Config(String path, String filename) throws IOException{
 		config = new File(path, filename + ".txt");
 		
@@ -65,6 +64,21 @@ public class Config {
 		this.kvPair = kvPair;
 		this.keys = keys;
 		this.values = values;
+	}
+	
+	/**
+	 * Retrieve an Object from the configuration file
+	 * 
+	 * @param s key
+	 * @return desired object
+	 */
+	public Object get(String s){
+		if(!kvPair.containsKey(s))
+			return false;
+		
+		Object v = kvPair.get(s);
+		
+		return (ConfigurationLoader.isBoolean(v)) ? ConfigurationLoader.toBoolean(v) : false;
 	}
 	
 	/**
