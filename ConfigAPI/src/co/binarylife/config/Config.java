@@ -8,7 +8,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import co.binarylife.config.util.ConfigurationLoader;
+import co.binarylife.config.util.Checker;
 
 /**
  * Configuration object
@@ -78,7 +78,7 @@ public class Config {
 		
 		Object v = kvPair.get(s);
 		
-		return (ConfigurationLoader.isBoolean(v)) ? ConfigurationLoader.toBoolean(v) : false;
+		return (Checker.isBoolean(v)) ? Checker.toBoolean(v) : false;
 	}
 	
 	/**
@@ -93,7 +93,7 @@ public class Config {
 		
 		Object v = kvPair.get(s); 
 		
-		return (ConfigurationLoader.isBoolean(v)) ? ConfigurationLoader.toBoolean(v) : false;
+		return (Checker.isBoolean(v)) ? Checker.toBoolean(v) : false;
 	}
 	
 	/**
@@ -108,7 +108,7 @@ public class Config {
 		
 		Object v = kvPair.get(s); 
 		
-		return (ConfigurationLoader.isByte(v)) ? ConfigurationLoader.toByte(v) : -1;
+		return (Checker.isByte(v)) ? Checker.toByte(v) : -1;
 	}
 	
 	/**
@@ -123,7 +123,7 @@ public class Config {
 		
 		Object v = kvPair.get(s); 
 		
-		return (ConfigurationLoader.isDouble(v)) ? ConfigurationLoader.toDouble(v) : -1;
+		return (Checker.isDouble(v)) ? Checker.toDouble(v) : -1;
 	}
 	
 	public File getFile(){
@@ -150,7 +150,7 @@ public class Config {
 		
 		Object v = kvPair.get(s); 
 		
-		return (ConfigurationLoader.isFloat(v)) ? ConfigurationLoader.toFloat(v) : -1;
+		return (Checker.isFloat(v)) ? Checker.toFloat(v) : -1;
 	}
 
 	/**
@@ -165,7 +165,7 @@ public class Config {
 		
 		Object v = kvPair.get(s); 
 		
-		return (ConfigurationLoader.isInt(v)) ? ConfigurationLoader.toInteger(v) : -1;
+		return (Checker.isInt(v)) ? Checker.toInteger(v) : -1;
 	}
 	
 	/**
@@ -180,7 +180,7 @@ public class Config {
 		
 		Object v = kvPair.get(s); 
 		
-		return (ConfigurationLoader.isLong(v)) ? ConfigurationLoader.toLong(v) : -1;
+		return (Checker.isLong(v)) ? Checker.toLong(v) : -1;
 	}
 	
 	/**
