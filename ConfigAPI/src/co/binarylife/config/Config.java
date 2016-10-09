@@ -73,12 +73,7 @@ public class Config {
 	 * @return desired object
 	 */
 	public Object get(String s){
-		if(!kvPair.containsKey(s))
-			return false;
-		
-		Object v = kvPair.get(s);
-		
-		return (Checker.isBoolean(v)) ? Checker.toBoolean(v) : false;
+		return kvPair.get(s); 
 	}
 	
 	/**
