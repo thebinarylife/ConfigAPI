@@ -6,3 +6,5 @@
 
 
 If you need to load an existing configuration use ConfigurationLoader.loadConfig(path, filename)
+
+###Large update approaching
