@@ -4,3 +4,5 @@ CreateCommand,java
 Main.java
 SectionManager.java
 CreateCommand.java
+SetCommand.java
+GetCommand.java
