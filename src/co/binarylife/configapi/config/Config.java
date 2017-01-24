@@ -39,8 +39,8 @@ public class Config implements Section
 		this.indentsNum = 0;
 		this.indents = "";
 		
-		if(!fileName.contains(".cnfg"))
-			config = new File(path, fileName + ".cnfg");
+		if(!fileName.contains(".yml"))
+			config = new File(path, fileName + ".yml");
 		else
 			config = new File(path, fileName);
 			
@@ -57,6 +57,11 @@ public class Config implements Section
 		}
 		
 		this.kvPairs = new HashMap<String, Object>();
+	}
+	
+	public Config(File file)
+	{
+		this(file.getName(), file.getParent());
 	}
 	
 	public boolean contains(String s)
