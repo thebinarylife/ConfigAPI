@@ -1,10 +1,10 @@
 # ConfigAPI
 
-1. Clone and add the file to your library.
-2. To create a configuration make a Configuration object and use the set(string, string) method to set values.
-3. Use the cooresponding get methods to retrieve values from the object.
+Clone and add the compiled or uncompiled source to your library.
 
+#### Utilizing Config Class 
 
-If you need to load an existing configuration use ConfigurationLoader.loadConfig(path, filename)
+Create a new config using `new Config(String name, String path)`
 
-###Large update approaching
+You can now create subsections and set methods via `set(String key, Object o)`
+If you need to load an existing configuration use `ConfigLoader.loadConfig(path, filename)`
