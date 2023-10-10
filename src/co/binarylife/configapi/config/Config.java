@@ -13,6 +13,7 @@ import java.util.Map;
 import co.binarylife.configapi.section.Section;
 import co.binarylife.configapi.section.SubSection;
 import co.binarylife.configapi.util.Checker;
+import co.binarylife.configapi.util.ConfigLoader;
 
 public class Config implements Section
 {
@@ -54,6 +55,8 @@ public class Config implements Section
 			{
 				e.printStackTrace();
 			}
+		} else {
+			ConfigLoader.loadConfig(this);
 		}
 		
 		this.kvPairs = new HashMap<String, Object>();

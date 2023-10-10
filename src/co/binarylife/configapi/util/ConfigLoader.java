@@ -12,12 +12,8 @@ import co.binarylife.configapi.section.Section;
 public class ConfigLoader
 {
 	
-	public static Config loadConfig(File f)
-	{
-		if(!f.exists())
-			return null;
-		
-		Config config = new Config(f.getName(), f.getParent());
+	public static Config loadConfig(Config config) {
+		File f = config.getConfigFile();
 		
 		try
 		{
@@ -101,14 +97,21 @@ public class ConfigLoader
 			
 			scanner.close();
 			
+			return config;
 		}
 		catch (FileNotFoundException e)
 		{
 			e.printStackTrace();
 			return null;
 		} 
+	}
+	
+	public static Config loadConfig(File f)
+	{
+		if(!f.exists())
+			return null;
 		
-		return config;
+		return loadConfig(new Config(f.getName(), f.getParent()));
 	}
 	
 	public static Config loadConfig(String file, String path)
